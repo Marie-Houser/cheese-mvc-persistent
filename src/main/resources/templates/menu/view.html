@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments :: head">
+    <meta charset="UTF-8"></meta>
+    <title th:text="${name}">Title</title>
+    <nav th:replace="fragments :: navigation"></nav>
+</head>
+<body>
+
+<p th:unless="${menu}">no menus :(</p>
+
+<ul th:each="cheese : ${menu.cheeses}">
+    <li th:text="${cheese.name}"></li>
+</ul>
+
+
+
+<p><a th:href="'/menu/add-item/' + ${menu.id}">Add Cheese</a></p>
+
+</body>
+</html>

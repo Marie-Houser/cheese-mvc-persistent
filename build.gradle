@@ -7,6 +7,8 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		compile('org.springframework.boot:spring-boot-starter-data-jpa')
+		compile('mysql:mysql-connector-java')
 	}
 }
 

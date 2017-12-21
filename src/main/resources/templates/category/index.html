@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <title>Title</title>
+    <nav th:replace="fragments :: navigation"></nav>
+
+</head>
+<body>
+<ul th:each="category : ${categories}">
+    <li th:text="${category.name}"></li>
+</ul>
+
+<a href="/category/add">Add Category</a>
+
+</body>
+</html>
